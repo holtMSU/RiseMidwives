@@ -87,23 +87,23 @@
         attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
-        var circle = L.circle([39.912217882241926, 116.39741065370897], {
+        var circle1 = L.circle([39.912217882241926, 116.39741065370897], {
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
           radius: 50000
         }).addTo(map);
 
-        circle.bindPopup("I am a circle in Beijing.");
+        circle1.bindPopup("I am a circle in Beijing.");
 
-        var circle = L.circle([36.863400811530695, 114.50606656522012], {
+        var circle2 = L.circle([36.863400811530695, 114.50606656522012], {
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
           radius: 50000
         }).addTo(map);
 
-        circle.bindPopup("<b>This Title is Bolded.</b><br>I am a circle, but I am in Shahe.</br><br>A City in Hebei County.</br><br>Is there no limit to the amount of information I can include here?</br><br>Can we include 汉字? Can I bold <b>汉字</b>?</br><br>We can do all of this, but we may NOT seperate breaks in the HTML or we will break the map.</br>");
+        circle2.bindPopup("<b>This Title is Bolded.</b><br>I am a circle, but I am in Shahe.</br><br>A City in Hebei County.</br><br>Is there no limit to the amount of information I can include here?</br><br>Can we include 汉字? Can I bold <b>汉字</b>?</br><br>We can do all of this, but we may NOT seperate breaks in the HTML or we will break the map.</br>");
 
 
 
