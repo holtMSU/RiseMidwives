@@ -15,6 +15,11 @@
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""></script>
 
+<!--JQuery-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+ <!--[if lte IE 8]><link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" /><![endif]-->
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css">
+
       <style>
 
       body {
@@ -30,8 +35,6 @@
         display: block;
 
     },
-
-
 
 
       </style>
@@ -78,8 +81,23 @@
 
 <!--map-->
 <div class="row"></div>
-    <div id="map"></div>
+
+  <div id="map"></div>
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+<!-- Include this library for mobile touch support  -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.2/jquery.ui.touch-punch.min.js"></script>
+
+
+  <script src="SliderControl.js"></script>
+
+
     <script>
+
+      var sliderControl = null;
+
       var map = L.map('map').setView([39.912217882241926, 116.41114356342437], 5);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/holteri1/cldypte3u000m01oaauslx0at/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG9sdGVyaTEiLCJhIjoiY2pkeG9wbXVxMHBycTJ3cXBlbXRzYWc5eSJ9.l8TQhcbzuGgBfBj3dhvkGw', {
@@ -87,7 +105,11 @@
         attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
 
+
+//Use usual LayerGroups
+
         var circle1 = L.circle([39.912217882241926, 116.39741065370897], {
+          time: "1955-01-01",
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
@@ -97,6 +119,7 @@
         circle1.bindPopup("I am a circle in Beijing.");
 
         var circle2 = L.circle([36.863400811530695, 114.50606656522012], {
+          time: "1950-01-01",
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
@@ -107,7 +130,22 @@
 
 
 
-      </script>
+       layerGroup = L.layerGroup([circle1,circle2]);
+       var sliderControl = L.control.sliderControl({layer:layerGroup, follow: true});
+       map.addControl(sliderControl);
+       sliderControl.startSlider();
+
+
+
+
+//Make sure to add the slider to the map ;-)
+  Map.addControl(sliderControl);
+//And initialize the slider
+  sliderControl.startSlider();
+
+
+
+  </script>
 
 
 <!--narrative-->
