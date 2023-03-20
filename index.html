@@ -108,21 +108,18 @@
 
 //Use usual LayerGroups
 
-
-
-
         var circle1 = L.circle([39.912217882241926, 116.39741065370897], {
-          time: "1955-01-01",
+          time: "1950-01-01",
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
           radius: 50000
         }).addTo(map);
 
-        circle1.bindPopup("I am a circle in Beijing.");
+        circle1.bindPopup("Reports from Beijing.");
 
         var circle2 = L.circle([36.863400811530695, 114.50606656522012], {
-          time: "1950-01-01",
+          time: "1951-01-01",
           color: 'white',
           fillColor: '#f03',
           fillOpacity: 0.5,
@@ -132,7 +129,7 @@
         circle2.bindPopup("<b>This Title is Bolded.</b><br>I am a circle, but I am in Shahe.</br><br>A City in Hebei County.</br><br>Is there no limit to the amount of information I can include here?</br><br>Can we include 汉字? Can I bold <b>汉字</b>?</br><br>We can do all of this, but we may NOT seperate breaks in the HTML or we will break the map.</br>");
 
         var circle3 = L.circle([31.201992829798506, 121.52872229409319], {
-                  time: "1951-01-01",
+                  time: "1952-01-01",
                   color: 'white',
                   fillColor: '#f03',
                   fillOpacity: 0.5,
@@ -141,7 +138,7 @@
 
         circle3.bindPopup("Shanghai Test");
         var circle4 = L.circle([32.47137704530483, 119.72039432399939], {
-                  time: "1952-01-01",
+                  time: "1953-01-01",
                   color: 'white',
                   fillColor: '#f03',
                   fillOpacity: 0.5,
@@ -153,17 +150,20 @@
 
 
        layerGroup = L.layerGroup([circle1,circle2,circle3,circle4]);
-       var sliderControl = L.control.sliderControl({layer:layerGroup, follow: true});
+       var sliderControl = L.control.sliderControl({
+
+         layer:layerGroup,
+         range: true,
+
+ });
        map.addControl(sliderControl);
        sliderControl.startSlider();
 
 
 
 
-//Make sure to add the slider to the map ;-)
-  Map.addControl(sliderControl);
-//And initialize the slider
-  sliderControl.startSlider();
+
+
 
   </script>
 
