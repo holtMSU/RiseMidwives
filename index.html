@@ -97,10 +97,7 @@
 
 <!--map-->
 <div class="row"></div>
-
   <div id="map"></div>
-
-
 
 <!--map again-->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -112,19 +109,15 @@
 
   <script src="SliderControl.js"></script>
 
-
-
-
-
   <script>
 
           var sliderControl = null;
 
-          var map = L.map('map').setView([36.485171, 109.166087], 4);
+          var map = L.map('map').setView([34.35671855584127, 103.69250351808023], 4);
 
           L.tileLayer('https://api.mapbox.com/styles/v1/holteri1/cldypte3u000m01oaauslx0at/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG9sdGVyaTEiLCJhIjoiY2pkeG9wbXVxMHBycTJ3cXBlbXRzYWc5eSJ9.l8TQhcbzuGgBfBj3dhvkGw', {
             minZoom: 4,
-            maxZoom: 15,
+            maxZoom: 4,
             attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
@@ -138,6 +131,7 @@
               fillOpacity: 0.5,
               radius: 50000
             }).addTo(map);
+
 
             circle1.bindPopup("Reports from Beijing.");
 
@@ -160,6 +154,7 @@
             }).addTo(map);
 
             circle3.bindPopup("Shanghai Test");
+
             var circle4 = L.circle([32.47137704530483, 119.72039432399939], {
                       time: "1953-01-01",
                       color: 'white',
@@ -178,13 +173,10 @@
              range: true,
      });
 
-
     map.addControl(sliderControl);
     sliderControl.startSlider();
 
   </script>
-
-
 
 
 
@@ -196,17 +188,15 @@
 
 </script>
 
-
   <!--Narrative textbox-->
 
-    <div id="img"></div>
-      <div style="padding-top:0px; padding-left: 15px; position: relative; z-index: 2;">
-        <div style="width:45%;height:500px;line-height:3em;overflow:auto;padding:5px; background-color:#E7DBB4;">
-          <p>This 'div' element contains more content than the previous one. Because there's too much text to fit into the box, the box grows scrollbars.Abstract:
-  	In this chapter, I examine the transition from old-style to new-style midwifery in the PRC during the 1950s. While old-style midwives were generally untrained and called in at the last minute to assist in birth, new-style midwives were modeled as general care providers who focused on reducing infant mortality rates and improving maternal health. They facilitated preventative medicine like vaccines as well. Here, I focus on this transition to midwife work as part of the larger public health goals, very different from later framing of midwives as the administrators of birth control and abortion. New-style midwives were also specifically trained to enter rural areas. This chapter, then, highlights the urban-rural divide that affected access to medical care providers and medical infrastructure. When considering the institution of the hukou system, we also see why moving medicine to the countryside, rather than asking rural people to seek better medical care in urban centers, became part of narrative that aimed to both protect underdeveloped urban infrastructure from population explosions and make good on promises to serve rural peasants.
-  	     </p>
-       </div>
-     </div>
+<div id="img"></div>
+  <div style="padding-top:0px; padding-left: 15px; position: relative; z-index: 100;">
+    <div style="width:45%;height:300px;line-height:3em;overflow:auto;padding:5px; background-color:#E7DBB4;">
+      <p>This 'div' element contains more content than the previous one. Because there's too much text to fit into the box, the box grows scrollbars.Abstract: In this chapter, I examine the transition from old-style to new-style midwifery in the PRC during the 1950s. While old-style midwives were generally untrained and called in at the last minute to assist in birth, new-style midwives were modeled as general care providers who focused on reducing infant mortality rates and improving maternal health. They facilitated preventative medicine like vaccines as well. Here, I focus on this transition to midwife work as part of the larger public health goals, very different from later framing of midwives as the administrators of birth control and abortion. New-style midwives were also specifically trained to enter rural areas. This chapter, then, highlights the urban-rural divide that affected access to medical care providers and medical infrastructure. When considering the institution of the hukou system, we also see why moving medicine to the countryside, rather than asking rural people to seek better medical care in urban centers, became part of narrative that aimed to both protect underdeveloped urban infrastructure from population explosions and make good on promises to serve rural peasants.
+  	   </p>
+    </div>
+ </div>
 
 </body>
 
