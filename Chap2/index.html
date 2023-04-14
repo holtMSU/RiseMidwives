@@ -42,7 +42,7 @@
            z-index: 0;
            position: absolute;
            right: 0px;
-           height: 500px;
+           height: 100%;
            width: 60%;
            display: inline;
            margin-left: auto;
@@ -59,6 +59,7 @@
 
       .div1 { grid-area: 1 / 1 / 2 / 2; }
       .div2 { grid-area: 1 / 2 / 2 / 3; }
+
 
 </style>
 
@@ -113,10 +114,20 @@
 <div class="div1">
 <!--Narrative textbox-->
 
-    <div style="padding-top:0px; padding-bottom:0px; padding-left:0px; position: inline; z-index: 0;">
-      <div style="width:80%;height:500px;line-height:3em;overflow:auto;padding:5px; background-color:#E7DBB4;">
-        <p>This 'div' element contains more content than the previous one. Because there's too much text to fit into the box, the box grows scrollbars.Abstract:In this chapter, I examine the transition from old-style to new-style midwifery in the PRC during the 1950s. While old-style midwives were generally untrained and called in at the last minute to assist in birth, new-style midwives were modeled as general care providers who focused on reducing infant mortality rates and improving maternal health. They facilitated preventative medicine like vaccines as well. Here, I focus on this transition to midwife work as part of the larger public health goals, very different from later framing of midwives as the administrators of birth control and abortion. New-style midwives were also specifically trained to enter rural areas. This chapter, then, highlights the urban-rural divide that affected access to medical care providers and medical infrastructure. When considering the institution of the hukou system, we also see why moving medicine to the countryside, rather than asking rural people to seek better medical care in urban centers, became part of narrative that aimed to both protect underdeveloped urban infrastructure from population explosions and make good on promises to serve rural peasants.
-       </p>
+    <div style="padding-top:0px; padding-bottom:0px; padding-left:0px;">
+      <div style="width:80%;height: 590px;line-height:1em;overflow:auto;padding:5px; background-color:#E7DBB4;">
+
+        <h6 class="text-uppercase fw-bold" style="padding-top:10px; padding-bottom:0px; padding-left:20px;font-family: Georgia">Introduction</h6>
+            <p style="padding-left:10px; font-family: Georgia">Text, text, and more text.<p>
+            <hr>
+        <h6 class="text-uppercase fw-bold" style="padding-top:10px; padding-bottom:0px; padding-left:20px;font-family: Georgia">Proposals to the Provincial Government</h6>
+            <p style="padding-left:10px; font-family: Georgia">Text, text, and more text.<p>
+  		      <hr>
+        <h6 class="text-uppercase fw-bold" style="padding-top:10px; padding-bottom:0px; padding-left:20px;font-family: Georgia">Descriptions of Training Programs</h6>
+            <p style="padding-left:10px; font-family: Georgia">Text, text, and more text.<p>
+            <hr>
+        <h6 class="text-uppercase fw-bold" style="padding-top:10px; padding-bottom:0px; padding-left:20px;font-family: Georgia">Conclusion</h6>
+            <p style="padding-left:10px; font-family: Georgia">Text, text, and more text.<p>
      </div>
    </div>
 <!--div1 div-->
@@ -150,44 +161,45 @@
 
 //Use usual LayerGroups
 
-            var circle1 = L.circle([39.912217882241926, 116.39741065370897], {
+            var circle1 = L.circle([25.03130852465176, 121.567468610774], {
               time: "1950-01-01",
-              color: 'white',
-              fillColor: '#f03',
+              color: '#E7DBB4',
+              fillColor: '#E7DBB4',
               fillOpacity: 0.5,
-              radius: 50000
+              radius: 5000
             }).addTo(map);
 
-            circle1.bindPopup("Reports from Beijing.");
+            circle1.bindPopup("<b>Taipei 台北</b><hr>Proposal #: Description<hr>Proposal #: Description<hr>Proposal #: Description");
 
-            var circle2 = L.circle([36.863400811530695, 114.50606656522012], {
+            var circle2 = L.circle([24.14351600754589, 120.73028158266801], {
               time: "1951-01-01",
-              color: 'white',
-              fillColor: '#f03',
+              color: '#E7DBB4',
+              fillColor: '#E7DBB4',
               fillOpacity: 0.5,
-              radius: 50000
+              radius: 5000
             }).addTo(map);
 
-            circle2.bindPopup("<b>This Title is Bolded.</b><br>I am a circle, but I am in Shahe.</br><br>A City in Hebei County.</br><br>Is there no limit to the amount of information I can include here?</br><br>Can we include 汉字? Can I bold <b>汉字</b>?</br><br>We can do all of this, but we may NOT seperate breaks in the HTML or we will break the map.</br>");
+            circle2.bindPopup("<b>Taizhong 台中市</b>");
 
-            var circle3 = L.circle([31.201992829798506, 121.52872229409319], {
+            var circle3 = L.circle([23.01229192178175, 120.22451646637009], {
                       time: "1952-01-01",
-                      color: 'white',
-                      fillColor: '#f03',
+                      color: '#E7DBB4',
+                      fillColor: '#E7DBB4',
                       fillOpacity: 0.5,
-                      radius: 50000
+                      radius: 5000
             }).addTo(map);
 
-            circle3.bindPopup("Shanghai Test");
-            var circle4 = L.circle([32.47137704530483, 119.72039432399939], {
+            circle3.bindPopup("<b>Tainan 台南市</b>");
+
+            var circle4 = L.circle([23.576166776157823, 119.5845593146847], {
                       time: "1953-01-01",
-                      color: 'white',
-                      fillColor: '#f03',
+                      color: '#E7DBB4',
+                      fillColor: '#E7DBB4',
                       fillOpacity: 0.5,
-                      radius: 50000
+                      radius: 5000
             }).addTo(map);
 
-            circle4.bindPopup("Yangzhou Test");
+            circle4.bindPopup("<b>Penghu County 澎湖群島</b><hr>Proposal #: Request for more midwives to be trained and sent to Penghu.<hr>Proposal #: Description<hr>Proposal #: Description<hr>Proposal #: Description");
 
 
 
