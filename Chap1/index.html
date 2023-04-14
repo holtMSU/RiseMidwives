@@ -37,16 +37,27 @@
            margin: 0;
        }
 
-         #map {
-           z-index: 1;
-           position: absolute;
-           height: 100%;
-           width: 100%;
-           display: block;
-           pointer-events: none;
-       }
+       #map {
+         z-index: 0;
+         position: absolute;
+         right: 0px;
+         height: 500px;
+         width: 60%;
+         display: inline;
+         margin-left: auto;
 
+     }
 
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 1 / 2 / 2 / 3; }
 
 </style>
 
@@ -71,7 +82,7 @@
     <div class="collapse navbar-collapse" id="navcol-2">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="https://holtmsu.github.io/RiseMidwives/Chap1">Chapter 1</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Chapter 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://holtmsu.github.io/RiseMidwives/Chap2">Chapter 2</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Chapter 3</a></li>
         <li class="nav-item"><a class="nav-link" href="https://holtmsu.github.io/RiseMidwives/About">About</a></li>
       </ul>
@@ -96,7 +107,23 @@
  </section>
 
 <!--map-->
-<div class="row"></div>
+
+<!--parent divs for columns-->
+<div class="parent">
+<div class="div1">
+
+  <!--Narrative textbox-->
+
+      <div style="padding-top:0px; padding-bottom:0px; padding-left:0px; position: inline; z-index: 0;">
+        <div style="width:80%;height:500px;line-height:3em;overflow:auto;padding:5px; background-color:#E7DBB4;">
+          <p>This 'div' element contains more content than the previous one. Because there's too much text to fit into the box, the box grows scrollbars.Abstract:In this chapter, I examine the transition from old-style to new-style midwifery in the PRC during the 1950s. While old-style midwives were generally untrained and called in at the last minute to assist in birth, new-style midwives were modeled as general care providers who focused on reducing infant mortality rates and improving maternal health. They facilitated preventative medicine like vaccines as well. Here, I focus on this transition to midwife work as part of the larger public health goals, very different from later framing of midwives as the administrators of birth control and abortion. New-style midwives were also specifically trained to enter rural areas. This chapter, then, highlights the urban-rural divide that affected access to medical care providers and medical infrastructure. When considering the institution of the hukou system, we also see why moving medicine to the countryside, rather than asking rural people to seek better medical care in urban centers, became part of narrative that aimed to both protect underdeveloped urban infrastructure from population explosions and make good on promises to serve rural peasants.
+         </p>
+       </div>
+     </div>
+  <!--div1 div-->
+  </div>
+
+<div class="div2>"
   <div id="map"></div>
 
 <!--map again-->
@@ -117,7 +144,7 @@
 
           L.tileLayer('https://api.mapbox.com/styles/v1/holteri1/cldypte3u000m01oaauslx0at/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaG9sdGVyaTEiLCJhIjoiY2pkeG9wbXVxMHBycTJ3cXBlbXRzYWc5eSJ9.l8TQhcbzuGgBfBj3dhvkGw', {
             minZoom: 4,
-            maxZoom: 4,
+            maxZoom: 15,
             attribution: '© <a href="https://www.mapbox.com/contribute/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
@@ -188,15 +215,14 @@
 
 </script>
 
-  <!--Narrative textbox-->
-
-<div id="img"></div>
-  <div style="padding-top:0px; padding-left: 15px; position: relative; z-index: 100;">
-    <div style="width:45%;height:300px;line-height:3em;overflow:auto;padding:5px; background-color:#E7DBB4;">
-      <p>This 'div' element contains more content than the previous one. Because there's too much text to fit into the box, the box grows scrollbars.Abstract: In this chapter, I examine the transition from old-style to new-style midwifery in the PRC during the 1950s. While old-style midwives were generally untrained and called in at the last minute to assist in birth, new-style midwives were modeled as general care providers who focused on reducing infant mortality rates and improving maternal health. They facilitated preventative medicine like vaccines as well. Here, I focus on this transition to midwife work as part of the larger public health goals, very different from later framing of midwives as the administrators of birth control and abortion. New-style midwives were also specifically trained to enter rural areas. This chapter, then, highlights the urban-rural divide that affected access to medical care providers and medical infrastructure. When considering the institution of the hukou system, we also see why moving medicine to the countryside, rather than asking rural people to seek better medical care in urban centers, became part of narrative that aimed to both protect underdeveloped urban infrastructure from population explosions and make good on promises to serve rural peasants.
-  	   </p>
-    </div>
- </div>
+<!--div2 div-->
+</div>
+<!--parent div-->
+</div>
+<!--style div-->
+</div>
+<!--grad1 div-->
+</div>
 
 </body>
 
