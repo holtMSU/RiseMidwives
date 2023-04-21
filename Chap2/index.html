@@ -205,7 +205,7 @@
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [121.10381672692607, 24.431417046151807, ]
+            coordinates: [121.10381672692607, 24.431417046151807]
         },
         properties: {
             title: 'Popup 2',
@@ -214,6 +214,21 @@
         }
     },
   ];
+
+  var dataset4 = [
+  {
+      type: 'Feature',
+      geometry: {
+          type: 'Point',
+          coordinates: [120.21283563935962, 22.992349646873457]
+      },
+      properties: {
+          title: 'Popup 3',
+          description: 'Hello once again, World!',
+          time: '1960'
+      }
+  }
+];
 
 
 var optionsObject = {
@@ -233,10 +248,15 @@ group2.addTo(map1);
 var group3 = L.geoJSON(dataset3, optionsObject);
 group3.addTo(map1);
 
+var group4 = L.geoJSON(dataset4, optionsObject);
+group4.addTo(map1);
+
+
 group1.options.time = "1945";
 group2.options.time = "1950";
 group3.options.time = "1955";
-   var layerGroup = L.layerGroup([group1, group2, group3]);
+group4.options.time = "1960";
+var layerGroup = L.layerGroup([group1, group2, group3, group4]);
 
 var sliderControl1 = L.control.sliderControl( {
     layer: layerGroup, // REQUIRED
