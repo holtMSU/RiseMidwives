@@ -158,62 +158,66 @@
 
 
 
-    var dataset1 = [
-    {
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [121.57335508590636, 25.035684278812035]
-        },
-        properties: {
-            title: 'Popup 1',
-            description: 'Original Taipei',
-            time: '1945'
-        }
-    },
-];
-
-  var dataset2 = [
-  {
+  var dataset1 = [
+      {
       type: 'Feature',
       geometry: {
           type: 'Point',
-          coordinates: [119.62066244742178, 23.58339155275806, ]
+          coordinates: [121.57335508590636, 25.035684278812035]
       },
       properties: {
-          title: 'Popup 3',
-          description: 'Hello once again, World!',
-          time: '1950'
+          title: '<b>Taipei, Taiwan 台灣台北</b>',
+          description: '<hr>1946/12/12: Proposal to establish vocational training for nurses and Midwives',
+          time: '1946'
       }
-  }
+  },
 ];
 
-  var dataset3 = [
-    {
+  var dataset2 = [
+        {
         type: 'Feature',
         geometry: {
             type: 'Point',
             coordinates: [121.57335508590636, 25.035684278812035]
         },
         properties: {
-            title: 'Popup 2',
-            description: 'Taipei 1955',
-            time: '1955'
+            title: '<b>Taipei, Taiwan 台灣台北</b>',
+            description:'<hr>1947/12/08: Raise concerns about the high infant mortality rate and suggested training more midwives to address the issue.<hr>1947/12/09: Provincial government discusses the standards for private nursing and midwife schools.',
+            time: '1947'
         }
     },
-    {
-        type: 'Feature',
-        geometry: {
-            type: 'Point',
-            coordinates: [121.10381672692607, 24.431417046151807, ]
-        },
-        properties: {
-            title: 'Popup 2',
-            description: 'Hello again, World!',
-            time: '1955'
-        }
-    },
-  ];
+];
+
+  var dataset3 = [
+      {
+      type: 'Feature',
+      geometry: {
+          type: 'Point',
+          coordinates: [120.16909904914192, 24.930001524653008]
+      },
+      properties: {
+          title: 'Popup 2',
+          description: '<hr> 1948/12/16: Nurse workshops have been establsihed, but there is a need for midwife-specific workshops.',
+          time: '1948'
+      }
+  },
+
+];
+
+  var dataset4 = [
+      {
+      type: 'Feature',
+      geometry: {
+          type: 'Point',
+          coordinates: [120.21283563935962, 22.992349646873457]
+      },
+      properties: {
+          title: 'All Province',
+          description: 'Hello once again, World!',
+          time: '1960'
+      }
+  }
+];
 
 
 var optionsObject = {
@@ -233,10 +237,15 @@ group2.addTo(map1);
 var group3 = L.geoJSON(dataset3, optionsObject);
 group3.addTo(map1);
 
-group1.options.time = "1945";
-group2.options.time = "1950";
-group3.options.time = "1955";
-   var layerGroup = L.layerGroup([group1, group2, group3]);
+var group4 = L.geoJSON(dataset4, optionsObject);
+group4.addTo(map1);
+
+
+group1.options.time = "1946";
+group2.options.time = "1947";
+group3.options.time = "1948";
+group4.options.time = "1950";
+var layerGroup = L.layerGroup([group1, group2, group3, group4]);
 
 var sliderControl1 = L.control.sliderControl( {
     layer: layerGroup, // REQUIRED
