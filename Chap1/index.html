@@ -157,7 +157,7 @@
               <p style="padding-left:10px; font-family: Georgia">Text, text, and more text.<p>
               <hr>
           <h6 class="text-uppercase fw-bold" style="padding-top:10px; padding-bottom:0px; padding-left:20px;font-family: Georgia">References</h6>
-              <p style="padding-left:10px; font-family: Georgia">(1) 李友义，<q>救救小生命！-- 谈 农村妇婴卫生工作,</q>人民日报，May 22, 1949. <br> (2) 李，<q>救救小生命！-- 谈 农村妇婴卫生工作.</q> <br>(3) As I will address in the second half of this chapter, practices that were not founded in scientific methods were labeled <q>superstitious</q> by both Republican and Communist supporters. While some methods were useful or at least emotionally therapeutic, others, like the one in this example, were clearly harmful and ineffective.  <br> (4) Citation. <br> (5) Citation. <br> (6) Citation.<p>
+              <p style="padding-left:10px; font-family: Georgia">Note： Newspaper articles that did not list specific locations are available under the <q>All Provinces</q> icon. <br>(1) 李友义，<q>救救小生命！-- 谈 农村妇婴卫生工作,</q>人民日报，May 22, 1949. <br> (2) 李，<q>救救小生命！-- 谈 农村妇婴卫生工作.</q> <br>(3) As I will address in the second half of this chapter, practices that were not founded in scientific methods were labeled <q>superstitious</q> by both Republican and Communist supporters. While some methods were useful or at least emotionally therapeutic, others, like the one in this example, were clearly harmful and ineffective.  <br> (4) Citation. <br> (5) Citation. <br> (6) Citation.<p>
 
      </div>
   <!--div1 div-->
@@ -177,85 +177,56 @@
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">MapBox</a> contributors',
     }).addTo(map1);
 
-
-
   var dataset1 = [
-      {
-      type: 'Feature',
-      geometry: {
-          type: 'Point',
-          coordinates: [121.57335508590636, 25.035684278812035]
-      },
-      properties: {
-          title: '<b>Taipei, Taiwan 台北市</b>',
-          description: '<hr>1946/12/12: Proposal to establish vocational training for nurses and Midwives',
-          time: '1946'
-      }
-  },
-];
-
-  var dataset2 = [
         {
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [121.57335508590636, 25.035684278812035]
+            coordinates: [108.85962696385906, 44.134077137655765]
         },
         properties: {
-            title: '<b>Taipei, Taiwan 台北市</b>',
-            description:'<hr>1947/12/08: Raised concerns about the high infant mortality rate and suggested training more midwives to address the issue.<hr>1947/12/09: Provincial government discusses the standards for private nursing and midwife schools.',
-            time: '1947'
+            title: '<b>All Province 中国</b>',
+            description: '<hr> 1949/03/25: People&#x27;s Daily Article <q><b>Prevention Measures for Neonatal Tetanus</b></q> (婴儿四六风的预防法): <br> This article provides advice on delivery methods that will reduce the possibility of contracting tetanus.<hr>',
+            time: '1949'
         }
     },
-];
+  ];
+
+  var dataset2 = [
+          {
+
+  		type: 'Feature',
+          geometry: {
+              type: 'Point',
+              coordinates: [120.45011066017366, 30.612336422751493]
+          },
+          properties: {
+              title: '<b>Liaotung (Liaodong) Peninsual, China (PRC) 中国, 辽东半岛</b>',
+              description:'<hr>1950/04/01: North-China Daily News reported:<br> <q>Eight thousand midwives who have been trained in modern confinement methods during the past six months are already reporting successes in their work in Peking. They were sent to work in the countryside of north and North-midwives report that during a month&#x27;s stay in rural townlet of Liaotung Province in Manchuria, 62 babies were safely delivered, and none of them died or tetanus, the main cause of infant deaths in China&#x27;s countryside.</q><hr>',
+              time: '1950'
+          }
+      },
+
+  ];
+
 
   var dataset3 = [
-      {
-      type: 'Feature',
-      geometry: {
-          type: 'Point',
-          coordinates: [120.16909904914192, 24.930001524653008]
+        {
+
+          type: 'Feature',
+          geometry: {
+              type: 'Point',
+              coordinates: [116.82141465971944, 35.54105261107335]
+          },
+          properties: {
+              title: '<b>Changma District, Shandong, China (PRC) 中国， 山东，常马</b>',
+              description:'<hr>1951/03/25: North-China Daily News reported <q>More than 5,000 women in the area have already been given an elementary course in midwifery under a programme of intensive training sponsored by the health department of East China Military and Administrative Committee. A total of 17,000 midwives is expected to come into service by the end of this year. <br> The infant mortality rate in East China is steadily decreasing as these midwives with modern training come forward to serve the people. In the Changma district of Shantung province, for instance, the former high rate has been reduced by over fifty per cent.</q>',
+              time: '1951'
+          }
       },
-      properties: {
-          title: 'Popup 2',
-          description: '<hr> 1948/12/16: Nurse workshops have been establsihed, but there is a need for midwife-specific workshops.',
-          time: '1948'
-      }
-  },
 
-];
+  ];
 
-var dataset4 = [
-  {
-      type: 'Feature',
-      geometry: {
-          type: 'Point',
-          coordinates: [120.16909904914192, 24.930001524653008]
-      },
-      properties: {
-          title: 'All Province',
-          description: '<hr> 1950/12/16: Raised concerns about lack of medical personell, nurses and midwives included. Especially concerned about the lack of access in mountainous regions.',
-          time: '1950'
-      }
-  },
-
-];
-
-var dataset5 = [
-   {
-       type: 'Feature',
-       geometry: {
-           type: 'Point',
-           coordinates: [120.49427412987106,22.677077426251724]
-       },
-       properties: {
-           title: 'Ping Tung 屏東市',
-           description: '<hr> 1951/03/23: Pingtung Midwives Association provides instructions on registering birth.',
-           time: '1951'
-       }
-   },
-
- ];
 
 var optionsObject = {
     onEachFeature: onEachFeature
@@ -274,19 +245,14 @@ group2.addTo(map1);
 var group3 = L.geoJSON(dataset3, optionsObject);
 group3.addTo(map1);
 
-var group4 = L.geoJSON(dataset4, optionsObject);
-group4.addTo(map1);
 
-var group5 = L.geoJSON(dataset5, optionsObject);
-group5.addTo(map1);
 
-group1.options.time = "1946";
-group2.options.time = "1947";
-group3.options.time = "1948";
-group4.options.time = "1950";
-group5.options.time = "1951";
+group1.options.time = "1949";
+group2.options.time = "1950";
+group3.options.time = "1951";
 
-var layerGroup = L.layerGroup([group1, group2, group3, group4, group5]);
+
+var layerGroup = L.layerGroup([group1, group2, group3]);
 
 var sliderControl1 = L.control.sliderControl( {
     layer: layerGroup, // REQUIRED
