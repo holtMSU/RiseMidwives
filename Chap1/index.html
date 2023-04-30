@@ -122,7 +122,7 @@
           <div class="row h-100">
             <div class="col-md-6 text-left text-md-start d-flex d-sm-flex d-md-flex justify-content-left align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
           <div style="max-width: 500px;">
-          <h2 class="text-uppercase fw-bold" style = "font-family: Garamond">Chapter 1: Midwifery Training in China</h2>
+          <h2 class="text-uppercase fw-bold" style = "font-family: Garamond">Chapter 1: Training Midwives in the 1950s</h2>
           <p class="my-3" style = "font-family: Garamond"><b>
             This chapter explores how new midwifery was portrayed and promoted in the early years of the People’s Republic of China (PRC). On the map below, I have displayed the geographic distribution of newspaper articles. The popups for each city will show you the date, title, and a brief explanation of the newspaper article. The narrative text on the left is my interpretation of this material.</b>
 </p>
@@ -177,19 +177,154 @@
         attribution: '&copy; <a href="https://www.mapbox.com/contribute/">MapBox</a> contributors',
     }).addTo(map1);
 
-  var dataset1 = [
+    var dataset1 = [
+
+           {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [108.85962696385906, 44.134077137655765]
+            },
+            properties: {
+                title: '<b>General Reports</b>',
+                description: '<hr> 1949/03/25: People&#x27;s Daily Article <q><b>Prevention Measures for Neonatal Tetanus</b></q> (婴儿四六风的预防法): <br> This article provides advice on delivery methods that will reduce the possibility of contracting tetanus.<hr> 1949/05/17: People&#x27;s Daily Article <q><b>Resolution on the tasks of the Chinese Women&#x27;s Movement</b> (中国妇女运动当前任务的决议 )</q>Num. 4 raises need for improvement in bithing services. <hr>',
+                time: '1949',
+                image: 'img/newspaper-folded.png',
+              icon: {
+                    iconUrl: 'Chap1/img/newspaper-folded.png',
+                    iconSize: [30, 30],
+                    iconAnchor: [3, 35],
+                    popupAnchor: [0, -41],
+                    className: 'dot',
+                            }
+
+            }
+        },
         {
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [115.10958770621998, 37.28002589670515]
+    },
+    properties: {
+        title: '<b>Southern Hebei Reports 河北</b>',
+        description: '<hr> 1949/01/16: People&#x27;s Daily Article promises to train 600 midwives.<hr>1949/04/01: People&#x27;s Daily Article <b>Taihang strengthens economics cadres&#x27;s study, Heping Peace Hospital organized midwife training courses.</b> (太行加强经济干部学习  和平医院办助产训练班)<hr>1949/05/22: People&#x27;s Daily Article reports that a 21-day midwife training course to be held in Southern Hebei.<hr>1949/06/27: People&#x27;s Daily Article reports midwives and delivery nurses are trained as part of epidemic prevention measures.',
+        image: 'img/newspaper-folded.png',
+      icon: {
+            iconUrl: 'Chap1/img/newspaper-folded.png',
+            iconSize: [30, 30],
+            iconAnchor: [3, 35],
+            popupAnchor: [0, -41],
+            className: 'dot',
+                    }
+
+    }
+},
+{
         type: 'Feature',
         geometry: {
             type: 'Point',
-            coordinates: [108.85962696385906, 44.134077137655765]
+            coordinates: [116.50403422695402, 44.022313902369206]
         },
         properties: {
-            title: '<b>All Province 中国</b>',
-            description: '<hr> 1949/03/25: People&#x27;s Daily Article <q><b>Prevention Measures for Neonatal Tetanus</b></q> (婴儿四六风的预防法): <br> This article provides advice on delivery methods that will reduce the possibility of contracting tetanus.<hr>',
-            time: '1949'
+            title: '<b>North China General 华北</b>',
+            description: '<hr> 1949/03/12: People&#x27;s Daily Article <b>Introduction to North China Public Health School</b> (华北卫生学校介绍), There were three classes of midwives that trained over 70 individual midwives. <hr>1949/05/07: People&#x27;s Daily Article <b>Criticism and Suggestions to the People&#x27;s government to strengthen maternal and infant care work.</b> (批评与建议  建议人民政府加强婴儿保育工作) <hr> 1949/05/12: People&#x27;s Daily Article announces a midwife training program. <hr>1949/08/04: People&#x27;s Daily Article reports a midwife training in at Taihang Peace Hospital is part of a larger effort to provide free medicine in rural areas.',
+            time: '1949',
+            image: 'img/newspaper-folded.png',
+          icon: {
+                iconUrl: 'Chap1/img/newspaper-folded.png',
+                iconSize: [30, 30],
+                iconAnchor: [3, 35],
+                popupAnchor: [0, -41],
+                className: 'dot',
+                        }
+
         }
     },
+    {
+       type: 'Feature',
+       geometry: {
+           type: 'Point',
+           coordinates: [114.8592373227249, 40.773627126267]
+       },
+       properties: {
+           title: '<b>ZhangJiaKou shi 张家口市</b>',
+           description: '<hr> 1949/03/13: People&#x27;s Daily Article reports that some women refuse to do midwife work because &#8221midwife&#8221 has some bad connotations. (更不愿学助产，怕人家叫“接生婆)',
+           time: '1949',
+           image: 'img/newspaper-folded.png',
+         icon: {
+               iconUrl: 'Chap1/img/newspaper-folded.png',
+               iconSize: [30, 30],
+               iconAnchor: [3, 35],
+               popupAnchor: [0, -41],
+               className: 'dot',
+                       }
+
+       }
+   },
+   {
+     type: 'Feature',
+     geometry: {
+         type: 'Point',
+         coordinates: [114.34595803242917, 38.33102431796134 ]
+     },
+     properties: {
+         title: '<b> Yancun near Pingshan 平山，沿村 </b>',
+         description: '<hr> 1949/03/25: People&#x27;s Daily Article <b>Maternity and Infant School in the Countryside </b> (妇婴学校在农村), Midwives are trained for 5 months in health, delivery, medicine, and injections.',
+         time: '1949',
+         image: 'img/newspaper-folded.png',
+       icon: {
+             iconUrl: 'Chap1/img/newspaper-folded.png',
+             iconSize: [30, 30],
+             iconAnchor: [3, 35],
+             popupAnchor: [0, -41],
+             className: 'dot',
+                     }
+
+     }
+ },
+ {
+       type: 'Feature',
+       geometry: {
+           type: 'Point',
+           coordinates: [ 115.80367228835948, 36.11563338367469]
+       },
+       properties: {
+           title: '<b> Yanggu, Qiqu 阳谷七区</b>',
+           description: '<hr> 1949/05/22: People&#x27;s Daily Article <b> Save the Children! Discussion of maternal and infant health in the countryside </b> (救救小生命！---- 谈 农村妇婴卫生工作), Local survey shows that births attended by new style midwives have lower infant mortality rates.',
+           time: '1949',
+           image: 'img/newspaper-folded.png',
+         icon: {
+               iconUrl: 'Chap1/img/newspaper-folded.png',
+               iconSize: [30, 30],
+               iconAnchor: [3, 35],
+               popupAnchor: [0, -41],
+               className: 'dot',
+                       }
+
+       }
+   },
+   {
+       type: 'Feature',
+       geometry: {
+           type: 'Point',
+           coordinates: [114.16408311802265, 38.28006068124361]
+       },
+       properties: {
+           title: '<b> Yanggu, Qiqu 阳谷七区</b>',
+           description: '<hr> 1949/07/01 (date estimated): People&#x27;s Daily Article <b> Discussion on the issues of infant and maternal health in rural areas. </b> (谈广大农村妇婴保健工作问题)',
+           time: '1949',
+           image: 'img/newspaper-folded.png',
+         icon: {
+               iconUrl: 'Chap1/img/newspaper-folded.png',
+               iconSize: [30, 30],
+               iconAnchor: [3, 35],
+               popupAnchor: [0, -41],
+               className: 'dot',
+                       }
+
+       }
+   },
   ];
 
   var dataset2 = [
