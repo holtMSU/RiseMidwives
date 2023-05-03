@@ -1,0 +1,18 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+          type: 'Feature',
+          geometry: {
+              type: 'Point',
+              coordinates: [120.21283563935962, 22.992349646873457]
+          },
+          properties: {
+              title: 'Popup 3',
+              description: 'Hello once again, World!',
+              time: '1960'
+          }
+      },
+
+    ]
+}
